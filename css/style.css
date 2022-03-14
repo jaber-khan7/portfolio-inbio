@@ -177,7 +177,7 @@ ul.links > .link {
   background: var(--background-shadow);
   box-shadow: var(--shadow-white-2);
   margin-right: 25px;
-  transition: 500ms;
+  transition: 300ms;
 }
 
 ul.links > .link a {
@@ -189,7 +189,7 @@ ul.links > .link a {
   border-radius: 8px;
 }
 .social-media li:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 .social-media li:hover a {
   background: var(--hover-gradient-red);
@@ -353,7 +353,26 @@ span {
 .client-detailes {
   margin-top: 5%;
 }
-/* .testimonial {
+.quote-icon-and-arrow {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+.quote-icon-and-arrow img {
+  width: 35%;
+}
+.social-media {
+  flex-basis: 50%;
+}
+/* 
+.testimonial {
   width: 90%;
   margin: 0 auto 2rem;
   background: var(--background-shadow);
@@ -377,7 +396,8 @@ span {
 }
 .client-image img {
   width: 100%;
-} */
+}
+*/
 
 /* ====================== awesome clients section ====================== */
 .awesome-client {
@@ -404,9 +424,10 @@ span {
 /* ============================= pricing section ============================= */
 .services-items {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   margin-bottom: 0;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
 }
 .package-value {
   display: inline-flex;
@@ -484,6 +505,343 @@ footer::before {
   top: 0;
   left: 0;
 }
+
+/* ================================ =============
+            media query 
+============================================== */
+/* =============== media query for small screen =============== */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  /* =========== pricing section =========== */
+  .services-of-our-package {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+/* =============== media query for medium screen =============== */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* utilities */
+  h3 {
+    font-size: 1.3rem;
+  }
+  /* ============ inner section ============ */
+  .banner-image {
+    flex-basis: 45%;
+    margin-top: 5rem;
+    order: 1;
+  }
+  .inner-text {
+    flex-basis: 55%;
+  }
+
+  /* ========== testimonial section ========== */
+  .testimonial {
+    border-radius: 10px;
+  }
+  .testimonial-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3% 2%;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+  }
+  .testimonial-box:hover {
+    transform: scale(1);
+  }
+  .client-image {
+    flex-basis: 25%;
+    margin-right: 1.5rem;
+  }
+  .client-image img {
+    width: 100%;
+  }
+  .client-detailes {
+    margin-top: 0;
+  }
+
+  /* ========== clients section ========== */
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46%;
+    margin-bottom: 2rem;
+  }
+
+  /* =========== pricing section =========== */
+  .price {
+    max-width: 85%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 1.4rem auto 0.2rem;
+  }
+  .text-about-price {
+    max-width: 85%;
+    margin: 0 auto 1.4rem;
+  }
+  .services-of-our-package {
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem 0 1rem;
+  }
+  .services-items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .order-button {
+    width: 50%;
+  }
+
+  /* =========== blog section =========== */
+  section#contact > .container > .row > .col {
+    width: 65%;
+    margin: auto;
+  }
+  ul.links > .link {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+}
+/* =============== media query for large screen =============== */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* utilities */
+  h3 {
+    font-size: 1.3rem;
+  }
+  /* ============ inner section ============ */
+  .banner-image {
+    flex-basis: 45%;
+    margin-top: 0;
+    order: 1;
+  }
+  .inner-text {
+    flex-basis: 55%;
+  }
+  .col.education-skills {
+    width: 75%;
+  }
+
+  /* ========== testimonial section ========== */
+  .testimonial {
+    width: 75%;
+    border-radius: 10px;
+  }
+  .testimonial-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3% 2%;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+  }
+  .testimonial-box:hover {
+    transform: scale(1);
+  }
+  .client-image {
+    flex-basis: 25%;
+    margin-right: 1.5rem;
+  }
+  .client-image img {
+    width: 100%;
+  }
+  .client-detailes {
+    margin-top: 0;
+  }
+
+  /* awesome clients section */
+  .brand {
+    width: 31%;
+    margin-bottom: 3rem;
+  }
+
+  /* pricing section */
+  .price {
+    max-width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 1.4rem auto;
+  }
+  .text-about-price {
+    max-width: 80%;
+    margin: 0 auto 1.4rem;
+  }
+  .services-of-our-package {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem auto 1rem;
+  }
+  .services-items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .order-button {
+    width: 50%;
+  }
+
+  /* =========== blog section =========== */
+  section#contact > .container > .row > .col {
+    width: 65%;
+    margin: auto;
+  }
+  ul.links > .link {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+}
+/* =============== media query for extra large screen =============== */
+@media screen and (min-width: 1200px) {
+  /* utilities */
+  h1 {
+    font-size: 3.6rem;
+  }
+  /* ============ inner section ============ */
+  .inner-text > h1 {
+    font-size: 3.6rem;
+    padding: 15px 0;
+  }
+  ul.dynamic-text li span {
+    font-size: 3rem;
+  }
+  .inner-text > h6 {
+    letter-spacing: 1px;
+  }
+  .inner-text p {
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+  }
+  .inner-text {
+    flex-basis: 60%;
+  }
+  .banner-image {
+    flex-basis: 40%;
+    margin-top: 0;
+    order: 1;
+  }
+  .static-text {
+    font-size: 2.5rem;
+  }
+
+  /* social links */
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 6rem;
+  }
+  .social-media {
+    flex-grow: 2;
+  }
+  .best-skill-links {
+    flex-grow: 1;
+  }
+
+  /* resume section */
+  /* .education-experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .education {
+    flex-basis: 50%;
+  }
+  .experience {
+    flex-basis: 50%;
+  } */
+
+  /* testimonial section */
+  .brands-and-category {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .category {
+    flex-basis: 30%;
+  }
+  .brands {
+    flex-basis: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .testimonial {
+    flex-basis: 38%;
+  }
+  .client-feedback-section {
+    flex-basis: 60%;
+  }
+  .client-detailes {
+    margin-top: 7%;
+  }
+
+  /* pricing section */
+  .price {
+    max-width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 1.4rem auto;
+  }
+  .text-about-price {
+    max-width: 80%;
+    margin: 0 auto 1.4rem;
+  }
+  .services-of-our-package {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem auto 1rem;
+  }
+  .services-items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .order-button {
+    width: 50%;
+  }
+
+  /* =========== blog section =========== */
+  section#contact > .container > .row > .col {
+    width: 65%;
+    margin: auto;
+  }
+  ul.links > .link {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+  .social-links {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .social-links > h6 {
+    margin-right: 5%;
+  }
+}
+/* =============== media query for x-extra large screen =============== */
+@media screen and (min-width: 1400px) {
+}
+
 /* 
 font-family: 'Fira Code', monospace;
 font-family: 'Poppins', sans-serif;
